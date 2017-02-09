@@ -3,8 +3,7 @@
 @section('content')
 
 <div class="row">
-<div class="col-md-2"></div>
-                        <!-- left column -->
+                        
                         <div class="col-md-6">
                         @if (Session::has('message'))
                         <div class="alert alert-info alert-dismissable">
@@ -24,39 +23,25 @@
                             </div>
                         @endif
 
-                            <!-- general form elements -->
+                            
                             <div class="box box-primary">
                                 <div class="box-header">
                                     <h3 class="box-title">Add a Category</h3>
-                                </div><!-- /.box-header -->
+                                </div>
                                 <!-- form start -->
 
                                 {!! Form::open(array('url'=>'save-a-file', 'method'=>'POST', 'class'=>'', 'files'=>true, 'role'=>'form')) !!}
-
                                     <div class="box-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">File</label>
                                             {!! Form::file('image[]', array('multiple'=>true))!!}
                                         </div>
-
-                                    </div><!-- /.box-body -->
-
+                                    </div>
                                     <div class="box-footer">
                                         <button type="submit" class="btn btn-primary">Save a File</button>
                                     </div>
-
                                 {!! Form::close() !!}
-                            </div><!-- /.box -->
-
-                            <!-- Form Element sizes -->
-
-
-
-                            <!-- Input addon -->
-
-
-                        </div><!--/.col (left) -->
-                        <!-- right column -->
-
+                            </div>
+                        </div>                        
                     </div>
 @endsection
